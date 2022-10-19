@@ -1,15 +1,19 @@
 import React from 'react';
-import {Button} from "react-bootstrap";
+import {Button, Image} from "react-bootstrap";
 
 import "./app.scss";
 import {Link} from "react-router-dom";
-
+import kuh from "./Kuh.png";
 
 function App() {
     return (
         <div className={"wrapper"}>
             <h1>Farbkonzept</h1>
             <small>Erlebnisbauernhof WetterWind</small>
+
+            <div>
+                <Image src={kuh} />
+            </div>
 
             <Link to={"/farbkonzept"} className={"farbkonzept"}>
                 <Button>Start</Button>
