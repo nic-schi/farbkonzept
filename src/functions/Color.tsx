@@ -23,6 +23,12 @@ export class Color extends Component<ColorProps, any> {
         }
     }
 
+    clear = () => {
+        this.values.forEach((value) => {
+            value.current?.clear();
+        });
+    }
+
     getValues = () => {
         return this.values.map((item) => {
             return item.current?.state.value;

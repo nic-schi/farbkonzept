@@ -39,6 +39,9 @@ class Farbkonzept extends Component<any, any> {
             this.pushToStorage("pri", pri as unknown as number[]);
             this.pushToStorage("sek", sek as unknown as number[]);
 
+            this.pri.current?.clear();
+            this.sek.current?.clear();
+
             alert("Vielen Dank!");
         }
     }

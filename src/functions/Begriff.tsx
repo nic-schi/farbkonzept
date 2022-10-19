@@ -17,6 +17,12 @@ class Begriff extends Component<BegriffProps, BegriffState> {
         value: null
     }
 
+    clear = () => {
+        this.setState({
+            value: null
+        });
+    }
+
     valueChange = (hIndex: number) => {
         this.setState({
             value: hIndex
