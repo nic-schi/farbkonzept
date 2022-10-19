@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Button} from "react-bootstrap";
+
+import "./app.scss";
+import {Link} from "react-router-dom";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className={"wrapper"}>
+            <h1>Farbkonzept</h1>
+            <small>Erlebnisbauernhof WetterWind</small>
+
+            <Link to={"/farbkonzept"} className={"farbkonzept"}>
+                <Button>Start</Button>
+            </Link>
+
+            <Link to={"/auswertung"} className={"auswertung"}>
+                <Button size={"sm"} variant={"outline-dark"}>Auswertung</Button>
+            </Link>
+        </div>
+    );
 }
 
 export default App;
